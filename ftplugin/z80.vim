@@ -22,3 +22,14 @@ function! s:IndentLabel()
 endfunction
 
 inoremap <buffer> :normal! all s:IndentLabel()
+
+call tcomment#type#Define('z80', '; %s')
+
+set tabstop=3
+set shiftwidth=3
+set expandtab
+
+set foldmethod=indent
+
+let g:vista_default_executive = 'ctags'
+" hi Folded ctermbg=236 ctermfg=179 cterm=NONE

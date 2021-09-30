@@ -55,6 +55,7 @@ syn keyword z80PreProc ifdef ifndef if else endif rotate defpage page echo error
 syn keyword z80PreProc .equ .org .map .ds .defs .dw .defw .db .defb .module .endmodule
 syn keyword z80PreProc .include .incbin .macro .endmacro .repeat .rept .endrepeat .endr
 syn keyword z80PreProc .ifdef .ifndef .if .else .endif .rotate .defpage .page .echo .error
+syn keyword z80PreProc .globl
 
 " Strings
 syn region z80String start=/"/ skip=/\\"/ end=/"/ oneline
@@ -107,9 +108,12 @@ else
 command -nargs=+ HiLink hi def link <args>
 endif
 
-HiLink z80Reg Constant
-HiLink z80Lbl Type
-HiLink z80Lbl2 Type
+" HiLink z80Reg Constant
+hi z80Reg ctermfg=73
+hi z80Lbl ctermfg=117
+hi z80Lbl2 ctermfg=117
+" HiLink z80Lbl Type
+" HiLink z80Lbl2 Type
 HiLink z80Comment Comment
 HiLink z80Comment2 Comment
 HiLink z80Inst Statement
@@ -124,7 +128,5 @@ delcommand HiLink
 endif
 
 let b:current_syntax = "z80"
-set ts=8
-set sw=8
 " vim: ts=8
 
