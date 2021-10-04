@@ -32,4 +32,6 @@ set expandtab
 set foldmethod=indent
 
 let g:vista_default_executive = 'ctags'
-" hi Folded ctermbg=236 ctermfg=179 cterm=NONE
+
+let g:gutentags_enabled = 1
+let g:gutentags_ctags_exclude = ['cfg', 'dsk', 'exp', '*.vim']
