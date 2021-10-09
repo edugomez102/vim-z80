@@ -35,3 +35,10 @@ let g:vista_default_executive = 'ctags'
 
 let g:gutentags_enabled = 1
 let g:gutentags_ctags_exclude = ['cfg', 'dsk', 'exp', '*.vim']
+
+" nnoremap <silent> K ':Telescope tags<cr>' . expand('<cword>')
+nnoremap <expr> K ':Telescope tags<cr>' . expand('<cword>')
+
+map <leader>o :!cpct_winape -a<cr>
+cnoreabbrev make FloatermNew make
+
