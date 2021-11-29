@@ -38,7 +38,8 @@ let g:gutentags_ctags_exclude = ['cfg', 'dsk', 'exp', '*.vim']
 
 " nnoremap <silent> K ':Telescope tags<cr>' . expand('<cword>')
 " nnoremap <expr> K ':Telescope tags<cr>' . expand('<cword>')
-nnoremap K :Telescope grep_string<cr>
+
+nnoremap <c-k> :Clap tags<cr>
 nmap <leader>h :ToggleHexDec<cr>
 
 map <leader>o :!cpct_winape -a<cr>
@@ -46,3 +47,4 @@ map <leader>o :!cpct_winape -a<cr>
 
 cnoreabbrev make make recode
 
+set termguicolors!
